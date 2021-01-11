@@ -1,0 +1,504 @@
+@import "global";
+@import "normalize";
+@import "fonts";
+
+.main {
+  background: url(https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/xmain-bg.png.pagespeed.ic.uq5fdV4tfV.webp)
+    repeat center center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  padding: 0 40px 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-items: flex-start;
+}
+
+.product-block {
+  width: 430px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.shop-block {
+  width: 44%;
+  max-width: 420px;
+  margin: 40px auto 0 0;
+
+  &__title {
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  &__suptitle {
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+  }
+
+  &__cat {
+    font-size: 14px;
+    line-height: 18px;
+    color: #b72126;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: -9px;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: 18px;
+    color: #000;
+    letter-spacing: 0.1em;
+  }
+
+  &__weight {
+    font-size: 12px;
+    line-height: 16px;
+    color: #606060;
+    letter-spacing: 0.025em;
+    padding: 25px 0 15px 0;
+  }
+
+  &__button {
+    background: #000;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    height: 45px;
+    letter-spacing: 0.2em;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      background: #8d691d;
+    }
+  }
+
+  &__disclaimer {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+
+  &__disclaimer-red {
+    color: #b72126;
+    font-weight: 700;
+  }
+
+  &__text-img {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.025em;
+    position: relative;
+    margin-left: 35px;
+    &:before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: url("https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/ship-icon.svg")
+        no-repeat;
+      left: -35px;
+      top: -5px;
+    }
+  }
+
+  &__details {
+    font-size: 12px;
+    line-height: 16px;
+    color: #606060;
+    letter-spacing: 0.025em;
+    margin-top: 20px;
+  }
+  &__details-link {
+    text-decoration: underline;
+    color: #000;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: #8d691d;
+    }
+  }
+}
+
+.size-qty {
+  &__flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -4px;
+  }
+
+  &__text--black {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    position: relative;
+    margin-right: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      right: -23px;
+      top: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    &:after {
+      content: "*";
+      font-size: 9px;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      right: -8px;
+      top: -1px;
+      color: red;
+    }
+  }
+
+  &__text--red {
+    font-size: 10px;
+    line-height: 20px;
+    color: #8d691d;
+    text-transform: uppercase;
+    letter-spacing: 0.165em;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__type-item {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #606060;
+    font-size: 12px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    position: relative;
+
+    &:hover .size-qty__type-tooltipe {
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  &__type-tooltipe {
+    position: absolute;
+    left: -1px;
+    top: -29px;
+    background: #000;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0 5px;
+    width: 100px;
+    font-weight: 700;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    z-index: -1;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -9px;
+      border-right: 9px solid transparent;
+      border-left: 0 solid transparent;
+      border-bottom: none;
+      border-top: 9px solid #000;
+    }
+  }
+
+  &__type-item.active {
+    color: #8d691d;
+    border-color: #8d691d;
+  }
+
+  &__type-item.no-active {
+    cursor: default;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__counter-block {
+    margin-left: 30px;
+    padding-left: 7px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__title-text {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin: 0 0 12px;
+    margin-left: 9px;
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__counter-left,
+  &__counter-right {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    display: block;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-out;
+    background: transparent;
+    outline: none;
+    &:hover {
+      border-color: #8d691d;
+    }
+  }
+  &__counter-center {
+    outline: none;
+    height: 30px;
+    width: 56px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    border-left: none;
+    font-size: 12px;
+    background: transparent;
+  }
+
+  &__counter-left {
+    transform: translateX(13px);
+    background: url(https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/minus-icon.svg)
+      no-repeat center center / 13px auto;
+  }
+
+  &__counter-right {
+    transform: translateX(-13px);
+    background: url(https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/plus-icon.svg)
+      no-repeat center center / 13px auto;
+  }
+
+}
+
+.description {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-top: 30px;
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: -7px;
+    margin-top: 0;
+  }
+  &__text {
+    margin-bottom: -12px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #606060;
+    letter-spacing: 0.025em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.aside {
+  width: 25%;
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    top: 48px;
+    left: -28px;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: 9px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+  }
+  &__item-img {
+    width: 100%;
+  }
+
+  &__item-title {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    margin: 0 0 9px;
+    color: #000;
+    margin-top: 5px;
+  }
+
+  &__size {
+  }
+
+  &__size-item {
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.2em;
+  }
+
+  &__flex {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__cat {
+    font-size: 8px;
+    line-height: 14px;
+    letter-spacing: 0.2em;
+    color: #b72126;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+#gallery_01 img{border:5px solid white;}
+ 
+.gallery{
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+bottom: 0;
+}
+
+.gallery a{
+display: block;
+margin-bottom: 20px;
+margin-left: 20px;
+img{
+  width: 50px;
+}
+}
+
+.zoom-img{
+ width: 430px !important;
+
+}
+
+.zoomWrapper{
+
+  width: 50% !important;
+}
+
+#fbplus-content{
+  border-width: 0 !important;
+  margin-left: 10px !important;
+}
+#fbplus-left, #fbplus-right{
+  display: none !important; 
+}
+
+#fbplus-outer {
+  width: 100% !important;
+  background: transparent !important;
+  position: static !important;
+}
+
+#fbplus-overlay{
+  background: #000 !important;
+  opacity: .9 !important;
+}
+
+#fbplus-close{
+  top: -4px !important;
+  right: -4px !important;
+  background: url(https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/close-icon.svg) no-repeat center center !important;
+}
+
+
+@import "media";
