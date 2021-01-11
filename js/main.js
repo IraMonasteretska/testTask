@@ -36,4 +36,16 @@ for(let item of sizeClothing){
   })
 }
 
+// set pointer events
+
+let zoomImg = document.querySelector('.zoom-img')
+document.querySelector('.product-block').addEventListener('click', () => {
+  zoomImg.style.pointerEvents = 'auto'
+  zoomImg.click()
+  function setPointerEvents() {
+    zoomImg.style.pointerEvents = 'none'
+  }
+  setTimeout(setPointerEvents, 100);
+})
+
 
