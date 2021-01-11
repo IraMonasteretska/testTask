@@ -327,7 +327,9 @@
     border-left: none;
     font-size: 12px;
     background: transparent;
-    box-shadow: none;
+    box-shadow: none !important;
+    border-radius: none !important; 
+    -webkit-appearance: none;
   }
 
   &__counter-left {
