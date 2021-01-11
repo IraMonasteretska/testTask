@@ -335,7 +335,8 @@
   &__counter-left {
     transform: translateX(13px);
     background: url(https://www.mariab.ae/skin/frontend/rwd/shopistan/images/theme/minus-icon.svg)
-      no-repeat center center / 13px auto;
+      no-repeat center center ;
+      background-size: 13px
   }
 
   &__counter-right {
